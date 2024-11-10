@@ -1,0 +1,59 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#vehicle-list {
+  margin: 20px auto;
+  width: 80%;
+  overflow-x: auto; /* Enables horizontal scrolling for small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #e00f0f; /* Green background for header */
+  color: white; /* White text for header */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+td a {
+  color: #e00f0f; /* Green links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+td a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
