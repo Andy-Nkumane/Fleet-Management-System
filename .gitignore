@@ -1,2 +1,4 @@
-*.db
+*.db*
 Migrations/
+package-lock.json
+node_modules
