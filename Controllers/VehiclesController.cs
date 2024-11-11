@@ -62,13 +62,25 @@ namespace FleetManagementSystem.Controllers
             
             if (existingVehicle == null)
             {
-                return NotFound($"Vehicle with ID {vehicle.VehicleId} not found.");
-            }
+                // Create a new vehicle record
+                var newVehicle = new Vehicle
+                {
+                    VehicleId = vehicle.VehicleId,
+                    Latitude = vehicle.Latitude,
+                    Longitude = vehicle.Longitude,
+                    Timestamp = vehicle.Timestamp
+                };
 
-            // Update the existing vehicle's properties
-            existingVehicle.Latitude = vehicle.Latitude;
-            existingVehicle.Longitude = vehicle.Longitude;
-            existingVehicle.Timestamp = vehicle.Timestamp;
+                // Add the new vehicle to the context
+                await _context.Vehicle.AddAsync(newVehicle);
+            }
+            else
+            {
+                // Update the existing vehicle's properties
+                existingVehicle.Latitude = vehicle.Latitude;
+                existingVehicle.Longitude = vehicle.Longitude;
+                existingVehicle.Timestamp = vehicle.Timestamp;
+            }
             
             // Save changes to the database
             await _context.SaveChangesAsync();
