@@ -47,10 +47,35 @@ This is a basic fleet management web application that tracks the current locatio
     Go to browser and run `http://localhost:5251/`.
 
 ## Running Tests
+
+### Backend Tests
+
 To run unit tests, navigate to the `Tests` directory and execute:
 
 ```bash
 dotnet test
+```
+
+### Frontend Tests
+
+1. Install Mocha and Chai:
+
+```bash
+npm install --save-dev mocha chai
+```
+
+2. Add a Test Script in your `package.json`:
+
+```json
+"scripts": {
+    "test": "mocha"
+}
+```
+
+3. Run the Tests:
+
+```bash
+npm test
 ```
 
 ## Notes
