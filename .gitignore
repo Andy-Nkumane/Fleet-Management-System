@@ -3,3 +3,5 @@ Migrations/
 package-lock.json
 node_modules
 test-results.xml
+obj/
+bin/
