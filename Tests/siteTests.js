@@ -29,7 +29,7 @@ describe('API Tests', () => {
                 .end((err, res) => {
                     expect(res).to.have.status(200); // Expecting a 200 OK response
                     expect(res.body).to.be.an('object'); // Expecting a response body
-                    expect(res.body).to.have.property('message', 'Location updated successfully'); // Adjust based on your API response
+                    expect(res.body).to.have.property('message', 'Location updated successfully');
                     done();
                 });
         });
